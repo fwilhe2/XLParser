@@ -9,9 +9,9 @@ jobs:
 
     runs-on: windows-latest
     env:
-      working-directory: src
+      working-directory: src/XLParser
     steps:
     - uses: actions/checkout@v2
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1.0.1
-    - run: MSBuild.exe XLParser.sln
+    - run: MSBuild.exe XLParser.csproj
